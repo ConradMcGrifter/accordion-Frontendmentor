@@ -1,0 +1,28 @@
+$padding: 1em;
+
+$colors: (
+    DarkBlue: hsl(238, 29%, 16%),
+    SoftRed: hsl(14, 88%, 65%),
+    VeryDarkGrayishBlue: hsl(237, 12%, 33%),
+    GrayishBlue: hsl(240, 6%, 50%),
+    Divider: hsl(240, 5%, 91%),
+    bg-SoftViolet: hsl(273, 75%, 66%),
+    bg-SoftBlue: hsl(240, 73%, 65%),
+);
+
+@function color($colorname) {
+    @return map-get($colors, $colorname);
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin mobileSize {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}

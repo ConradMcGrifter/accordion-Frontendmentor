@@ -1,0 +1,26 @@
+@import "config";
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue));
+
+    @include mobileSize {
+        background: red; //testing
+    }
+}
