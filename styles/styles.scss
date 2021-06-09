@@ -1,4 +1,4 @@
-@import "config";
+@import "config", "accordion";
 
 html {
     box-sizing: border-box;
@@ -19,8 +19,72 @@ body {
     font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue));
+    padding: 4em;
+
+    @include flexCenter();
 
     @include mobileSize {
         background: red; //testing
+    }
+}
+
+.accordion-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 500px;
+    background: white;
+    border-radius: 25px;
+    @include flexCenter();
+
+    @include mobileSize {
+        flex-direction: column;
+    }
+
+    .box-img {
+        position: absolute;
+        top: 225px;
+        left: -95px;
+        z-index: 999;
+    }
+
+    .accordion-img--wrap {
+        // outline: solid 2px red;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .hero-img {
+            position: absolute;
+            left: -75px;
+            top: 0px;
+            transform: translateY(25%);
+        }
+
+        .shadow-img {
+            // width: 100%;
+            // height: 100%;
+            // object-fit: cover;
+            position: absolute;
+            top: -275px;
+            left: -575px;
+        }
+    }
+
+    .accordion--wrap {
+        // outline: solid 2px blue;
+        padding: 1em 3em 1em 1em;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 1em;
+        }
     }
 }

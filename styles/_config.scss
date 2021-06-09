@@ -14,7 +14,7 @@ $colors: (
     @return map-get($colors, $colorname);
 }
 
-@mixin flexCenter($direction) {
+@mixin flexCenter($direction: row) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ $colors: (
 }
 
 @mixin mobileSize {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 950px) {
         @content;
     }
 }
