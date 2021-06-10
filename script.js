@@ -1,61 +1,27 @@
-var acc = document.getElementsByClassName("accordion");
-var panel = document.getElementsByClassName("panel");
+const ACC = document.getElementsByClassName("accordion");
+const PANEL = document.getElementsByClassName("panel");
 
-// for (i = 0; i < acc.length; i++) {
-//     acc[i].addEventListener("click", function () {
-//         for (let j = 0; j < acc.length; j++) {
-//             let panel = acc[j].nextElementSibling;
-//             panel.classList.remove("display");
-
-//             acc[j].classList.remove("active"); // this removes the darkened highlight
-
-//             acc[j].style.fontWeight = "400";
-//         }
-
-//         this.classList.toggle("active");
-//         this.style.fontWeight = "700";
-//         let panel = this.nextElementSibling;
-
-//         if (!panel.classList.contains("display")) {
-//             panel.classList.add("display");
-//         } else if (panel.classList.contains("display")) {
-//             panel.classList.remove("display");
-//         }
-//         // if (panel.style.display === "block") {
-//         //     panel.style.display = "none";
-//         // } else {
-//         //     panel.style.display = "block";
-//         // }
-
-//         // if (!this.style.fontWeight == "700") {
-//         //     this.style.fontWeight = "700";
-//         //     console.log("okok");
-//         // } else {
-//         //     this.style.fontWeight = "400";
-//         // }
-//     });
-// }
-
-for (let i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
+// I found the following code on stackoverflow but I added a little bit to it so it also rotates and resets the    // red arrows on the right side.
+// This code makes it so the accordion can only open one section at a time. it will close everything except for    // the section that is clicked on
+for (let i = 0; i < ACC.length; i++) {
+    ACC[i].onclick = function () {
         var setClasses = !this.classList.contains("display");
-        setClass(acc, "display", "remove");
-        setClass(panel, "display", "remove");
-        setClass(acc, "rotate", "remove");
 
+        // these functions target the accordion button and content and removes the .display class--resetting       // everything back to default
+        setClass(ACC, "display", "remove");
+        setClass(PANEL, "display", "remove");
+        setClass(ACC, "rotate", "remove");
+
+        // if the targeted element doesnt have the .display class on it, it gets toggled on. it also rotates the   //arrow of the selected FAQ
         if (setClasses) {
             this.classList.toggle("display");
             this.nextElementSibling.classList.toggle("display");
             this.classList.toggle("rotate");
         }
-        // if (!this.classList.contains("rotate")) {
-        //     this.classList.add("rotate");
-        // } else if (this.classList.contains("rotate")) {
-        //     this.classList.remove("rotate");
-        // }
     };
 }
 
+//this function loops through an array of elements and can add or remove a class
 function setClass(els, className, fnName) {
     for (var i = 0; i < els.length; i++) {
         els[i].classList[fnName](className);

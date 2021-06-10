@@ -81,7 +81,7 @@ hr {
         .shadow-img-mobile {
             position: absolute;
             display: none;
-            top: -10px;
+            top: 5px;
 
             @include mobileSize {
                 display: block;
@@ -189,7 +189,7 @@ hr {
                 line-height: 1.6;
                 color: color(GrayishBlue);
                 font-size: 1.4rem;
-                padding-right: 1em;
+                padding-right: 1.5em;
 
                 @include mobileSize {
                     line-height: 1.4;
