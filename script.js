@@ -8,9 +8,9 @@ for (let i = 0; i < ACC.length; i++) {
         var setClasses = !this.classList.contains("display");
 
         // these functions target the accordion button and content and removes the .display class--resetting       // everything back to default
-        setClass(ACC, "display", "remove");
-        setClass(PANEL, "display", "remove");
-        setClass(ACC, "rotate", "remove");
+        setClass(ACC, "display");
+        setClass(PANEL, "display");
+        setClass(ACC, "rotate");
 
         // if the targeted element doesnt have the .display class on it, it gets toggled on. it also rotates the   //arrow of the selected FAQ
         if (setClasses) {
@@ -21,9 +21,10 @@ for (let i = 0; i < ACC.length; i++) {
     };
 }
 
-//this function loops through an array of elements and can add or remove a class
-function setClass(els, className, fnName) {
+//this function loops through an array of elements and removes a class
+// originally it had a 3rd argument that took in a method name --like this--> els[i].classList.[fnName](className);// but I only need to use remove() method so i hard coded it
+function setClass(els, className) {
     for (var i = 0; i < els.length; i++) {
-        els[i].classList[fnName](className);
+        els[i].classList.remove(className);
     }
 }
