@@ -44,6 +44,10 @@
             font-size: 1.4rem;
         }
 
+        &:hover {
+            color: color(SoftRed)
+        }
+
         &::after {
             content: url("../images/icon-arrow-down.svg");
             position: absolute;

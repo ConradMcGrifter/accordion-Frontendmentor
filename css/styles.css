@@ -59,6 +59,10 @@
   }
 }
 
+.accordion--wrap .accordion:hover {
+  color: #f47c57;
+}
+
 .accordion--wrap .accordion::after {
   content: url("../images/icon-arrow-down.svg");
   position: absolute;
