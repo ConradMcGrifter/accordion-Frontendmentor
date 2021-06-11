@@ -1,14 +1,68 @@
-.accordion {
-    background-color: rgb(255, 255, 255);
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
+.accordion--wrap {
+    // outline: solid 2px blue;
+    padding: 1em 8em 1em 1em;
+    height: 100%;
     width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include mobileSize {
+        padding: 1em 1em 4em 1em;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1em;
+
+        @include mobileSize {
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+    }
+
+    .accordion {
+        background-color: rgb(255, 255, 255);
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+
+        padding: 1em 0;
+        transition: 0s;
+        font-size: 1.6rem;
+        position: relative;
+        color: color(GrayishBlue);
+        font-weight: 400;
+
+        @include mobileSize {
+            font-size: 1.4rem;
+        }
+
+        &::after {
+            content: url("../images/icon-arrow-down.svg");
+            position: absolute;
+            right: 0;
+        }
+
+        &.rotate::after {
+            content: url("../images/icon-arrow-down.svg");
+            position: absolute;
+
+            right: 0;
+            transform: rotate(180deg);
+        }
+
+        &.display {
+            font-weight: 700;
+            color: color(VeryDarkGrayishBlue);
+        }
+    }
 }
 
 // .active,
@@ -16,9 +70,33 @@
 //     background-color: #ccc;
 // }
 
+// .panel {
+//     padding: 0 18px;
+//     // display: none;
+//     background-color: white;
+//     overflow: hidden;
+// }
+
 .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
+    // display: none;
+    padding: 0;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    p {
+        padding: 0 0 1em 0;
+        line-height: 1.6;
+        color: color(GrayishBlue);
+        font-size: 1.4rem;
+        padding-right: 1.5em;
+
+        @include mobileSize {
+            line-height: 1.4;
+            font-size: 1.2rem;
+        }
+    }
+
+    &.display {
+        // max-height: auto;
+    }
 }

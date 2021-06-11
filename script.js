@@ -9,15 +9,29 @@ for (let i = 0; i < ACC.length; i++) {
 
         // these functions target the accordion button and content and removes the .display class--resetting       // everything back to default
         setClass(ACC, "display");
-        setClass(PANEL, "display");
+        // setClass(PANEL, "display");
         setClass(ACC, "rotate");
+
+        for (let i = 0; i < ACC.length; i++) {
+            PANEL[i].style.maxHeight = null;
+        }
 
         // if the targeted element doesnt have the .display class on it, it gets toggled on. it also rotates the   //arrow of the selected FAQ
         if (setClasses) {
             this.classList.toggle("display");
-            this.nextElementSibling.classList.toggle("display");
+            // this.nextElementSibling.classList.toggle("display");
             this.classList.toggle("rotate");
+
+            this.nextElementSibling.style.maxHeight =
+                this.nextElementSibling.scrollHeight + "px";
         }
+
+        // if (this.nextElementSibling.style.maxHeight) {
+        //     this.nextElementSibling.style.maxHeight = null;
+        // } else {
+        //     this.nextElementSibling.style.maxHeight =
+        //         this.nextElementSibling.scrollHeight + "px";
+        // }
     };
 }
 
