@@ -24,7 +24,8 @@ body {
     @include flexCenter();
 
     @include mobileSize {
-        padding: 4em 2em;
+        padding: 0em 2em 2em 2em;
+        align-items: flex-end;
     }
 }
 
@@ -47,7 +48,7 @@ hr {
         flex-direction: column;
         max-height: unset;
         height: unset;
-        margin-top: 8em;
+        margin-top: 0em;
         padding: 0 1em 1em 1em;
     }
 
@@ -71,7 +72,7 @@ hr {
         justify-content: center;
 
         .hero-img-mobile {
-            transform: translate(-5%, -37%);
+            transform: translate(-5%, -35%);
             display: none;
 
             @include mobileSize {
@@ -82,7 +83,7 @@ hr {
         .shadow-img-mobile {
             position: absolute;
             display: none;
-            top: 0;
+            top: -5px;
 
             @include mobileSize {
                 display: block;
@@ -98,7 +99,7 @@ hr {
         overflow: hidden;
 
         @include mobileSize {
-            height: 125px;
+            height: 115px;
             overflow: visible;
         }
 

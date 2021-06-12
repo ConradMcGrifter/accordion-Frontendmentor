@@ -154,7 +154,10 @@ body {
 
 @media screen and (max-width: 950px) {
   body {
-    padding: 4em 2em;
+    padding: 0em 2em 2em 2em;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -195,7 +198,7 @@ hr {
             flex-direction: column;
     max-height: unset;
     height: unset;
-    margin-top: 8em;
+    margin-top: 0em;
     padding: 0 1em 1em 1em;
   }
 }
@@ -229,8 +232,8 @@ hr {
 }
 
 .accordion-container .mobile-images .hero-img-mobile {
-  -webkit-transform: translate(-5%, -37%);
-          transform: translate(-5%, -37%);
+  -webkit-transform: translate(-5%, -35%);
+          transform: translate(-5%, -35%);
   display: none;
 }
 
@@ -243,7 +246,7 @@ hr {
 .accordion-container .mobile-images .shadow-img-mobile {
   position: absolute;
   display: none;
-  top: 0;
+  top: -5px;
 }
 
 @media screen and (max-width: 950px) {
@@ -261,7 +264,7 @@ hr {
 
 @media screen and (max-width: 950px) {
   .accordion-container .accordion-img--wrap {
-    height: 125px;
+    height: 115px;
     overflow: visible;
   }
 }
