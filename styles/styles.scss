@@ -25,7 +25,7 @@ body {
 
     @include mobileSize {
         padding: 2em 2em 2em 2em;
-        align-items: flex-end;
+        // align-items: flex-end;
     }
 }
 
@@ -77,6 +77,7 @@ hr {
 
             @include mobileSize {
                 display: block;
+                margin-top: 5em;
             }
         }
 
