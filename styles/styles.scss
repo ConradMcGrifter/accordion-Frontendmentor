@@ -24,7 +24,7 @@ body {
     @include flexCenter();
 
     @include mobileSize {
-        padding: 0em 2em 2em 2em;
+        padding: 2em 2em 2em 2em;
         align-items: flex-end;
     }
 }
@@ -46,8 +46,8 @@ hr {
 
     @include mobileSize {
         flex-direction: column;
-        max-height: unset;
-        height: unset;
+        max-height: 100%;
+        height: auto;
         margin-top: 0em;
         padding: 0 1em 1em 1em;
     }

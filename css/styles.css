@@ -154,7 +154,7 @@ body {
 
 @media screen and (max-width: 950px) {
   body {
-    padding: 0em 2em 2em 2em;
+    padding: 2em 2em 2em 2em;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
@@ -196,8 +196,8 @@ hr {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: unset;
-    height: unset;
+    max-height: 100%;
+    height: auto;
     margin-top: 0em;
     padding: 0 1em 1em 1em;
   }
