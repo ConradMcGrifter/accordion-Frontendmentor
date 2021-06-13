@@ -24,8 +24,10 @@ body {
     @include flexCenter();
 
     @include mobileSize {
+        min-height:100vh;
+        height:unset;
         padding: 2em 2em 2em 2em;
-        // align-items: flex-end;
+        align-items: flex-end;
     }
 }
 

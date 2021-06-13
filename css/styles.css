@@ -154,7 +154,12 @@ body {
 
 @media screen and (max-width: 950px) {
   body {
+    min-height: 100vh;
+    height: unset;
     padding: 2em 2em 2em 2em;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
