@@ -134,8 +134,9 @@ body {
   height: 100%;
   font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
-  background: linear-gradient(#af67e9, #6565e7);
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat;
+  background: linear-gradient(#af67e9, #6565e7) no-repeat;
+  background-size: cover;
   padding: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
