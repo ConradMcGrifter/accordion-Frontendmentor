@@ -119,6 +119,9 @@ html {
           box-sizing: border-box;
   min-height: 100%;
   font-size: 62.5%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat;
+  background: linear-gradient(#af67e9, #6565e7) no-repeat;
+  background-size: cover;
 }
 
 *,
@@ -134,9 +137,6 @@ body {
   height: 100%;
   font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat;
-  background: linear-gradient(#af67e9, #6565e7) no-repeat;
-  background-size: cover;
   padding: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,7 +198,7 @@ hr {
             flex-direction: column;
     max-height: 100%;
     height: auto;
-    margin-top: 0em;
+    margin-top: 10em;
     padding: 0 1em 1em 1em;
   }
 }
@@ -240,7 +240,6 @@ hr {
 @media screen and (max-width: 950px) {
   .accordion-container .mobile-images .hero-img-mobile {
     display: block;
-    margin-top: 5em;
   }
 }
 

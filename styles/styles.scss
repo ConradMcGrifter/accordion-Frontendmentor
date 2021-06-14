@@ -4,6 +4,10 @@ html {
     box-sizing: border-box;
     min-height: 100%;
     font-size: 62.5%;
+    background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue)) no-repeat;
+    background-size: cover;
+
+
 }
 
 *,
@@ -18,8 +22,6 @@ body {
     height: 100%;
     font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue)) no-repeat;
-    background-size: cover;
     padding: 4em;
 
     @include flexCenter();
@@ -51,7 +53,7 @@ hr {
         flex-direction: column;
         max-height: 100%;
         height: auto;
-        margin-top: 0em;
+        margin-top: 10em;
         padding: 0 1em 1em 1em;
     }
 
@@ -80,7 +82,7 @@ hr {
 
             @include mobileSize {
                 display: block;
-                margin-top: 5em;
+                
             }
         }
 
