@@ -19,19 +19,32 @@ body {
     font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     padding: 4em;
-    background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue));
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue));
+    // background-repeat: no-repeat;
+    // background-size: contain;
     display: flex;
 
     @include flexCenter();
 
     @include mobileSize {
+        height: unset;
         min-height: 100%;
         // height: unset;
         padding: 10em 2em 2em 2em;
         // align-items: flex-end;
     }
+}
+
+.background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue))
+        no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 hr {
@@ -52,7 +65,7 @@ hr {
 
     @include mobileSize {
         flex-direction: column;
-        max-height: 100%;
+
         height: auto;
         // margin-top: 10em;
         padding: 0 1em 1em 1em;
