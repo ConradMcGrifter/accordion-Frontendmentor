@@ -30,7 +30,7 @@ body {
         height: unset;
         min-height: 100%;
         // height: unset;
-        padding: 10em 2em 2em 2em;
+        padding: 10em 2em 4em 2em;
         // align-items: flex-end;
     }
 }
@@ -60,7 +60,7 @@ hr {
 
     background: white;
     border-radius: 25px;
-    box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.281);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.281);
     @include flexCenter();
 
     @include mobileSize {
