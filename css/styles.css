@@ -119,9 +119,6 @@ html {
           box-sizing: border-box;
   height: 100%;
   font-size: 62.5%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat;
-  background: linear-gradient(#af67e9, #6565e7) no-repeat;
-  background-size: cover;
 }
 
 *,
@@ -138,8 +135,13 @@ body {
   font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   padding: 4em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -155,9 +157,8 @@ body {
 
 @media screen and (max-width: 950px) {
   body {
-    min-height: 100vh;
-    height: unset;
-    padding: 2em 2em 2em 2em;
+    min-height: 100%;
+    padding: 10em 2em 2em 2em;
   }
 }
 
@@ -198,7 +199,6 @@ hr {
             flex-direction: column;
     max-height: 100%;
     height: auto;
-    margin-top: 10em;
     padding: 0 1em 1em 1em;
   }
 }
@@ -256,6 +256,7 @@ hr {
 }
 
 .accordion-container .accordion-img--wrap {
+  min-height: 50rem;
   height: 100%;
   width: 100%;
   position: relative;
@@ -264,6 +265,7 @@ hr {
 
 @media screen and (max-width: 950px) {
   .accordion-container .accordion-img--wrap {
+    min-height: unset;
     height: 115px;
     overflow: visible;
   }

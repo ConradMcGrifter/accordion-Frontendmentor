@@ -4,9 +4,6 @@ html {
     box-sizing: border-box;
     height: 100%;
     font-size: 62.5%;
-    background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue))
-        no-repeat;
-    background-size: cover;
 }
 
 *,
@@ -22,13 +19,17 @@ body {
     font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     padding: 4em;
+    background: linear-gradient(color(bg-SoftViolet), color(bg-SoftBlue));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
 
     @include flexCenter();
 
     @include mobileSize {
-        min-height: 100vh;
-        height: unset;
-        padding: 2em 2em 2em 2em;
+        min-height: 100%;
+        // height: unset;
+        padding: 10em 2em 2em 2em;
         // align-items: flex-end;
     }
 }
@@ -43,6 +44,7 @@ hr {
     height: 100%;
     max-width: 950px;
     max-height: 550px;
+
     background: white;
     border-radius: 25px;
     box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.281);
@@ -52,7 +54,7 @@ hr {
         flex-direction: column;
         max-height: 100%;
         height: auto;
-        margin-top: 10em;
+        // margin-top: 10em;
         padding: 0 1em 1em 1em;
     }
 
@@ -97,12 +99,14 @@ hr {
 
     .accordion-img--wrap {
         // outline: solid 2px red;
+        min-height: 50rem;
         height: 100%;
         width: 100%;
         position: relative;
         overflow: hidden;
 
         @include mobileSize {
+            min-height: unset;
             height: 115px;
             overflow: visible;
         }
